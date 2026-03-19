@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diabetes Prediction</title>
+    <!-- Flask-Bootstrap5의 매크로를 사용하여 CSS 로드 -->
+    {{ bootstrap.load_css() }}
+</head>
+
+<body>
+    {% block navbar %}
+    <!-- 부트스트랩 5 표준 네비게이션 바 레이아웃 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+        <div class="container">
+            <div class="d-flex gap-2 mt-3">
+                <a href="/index" class="btn btn-info" role="button">Home</a>
+                <a href="/prediction" class="btn btn-info" role="button">Diagnostic</a>
+            </div>
+        </div>
+    </nav>
+    {% endblock %}
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    <div class="container mt-5">
+        <hr>
+        <footer>&copy; 2021810052 이민혁</footer>
+    </div>
+
+    <!-- Flask-Bootstrap5의 매크로를 사용하여 JS 로드 -->
+    {{ bootstrap.load_js() }}
+</body>
+
+</html>
